@@ -16,7 +16,7 @@
     })
 
     function updateScrollPosition() {
-        scrollYPosition.value = window.scrollY;
+        scrollYPosition.value = window.scrollY + 500;
 
         if(scrollYPosition.value >= divLoc.value.tentang && animated.value.tentang == false){
             gsap.fromTo(".anim-deck-2-l", 
@@ -178,59 +178,59 @@
     <div id="page">
 
         <!-- Beranda -->
-        <div class="flex flex-col items-center justify-center px-20 py-10" id="beranda">
-            <h1 class="font-bold text-7xl px-16 py-10 leading-snug text-center anim-deck-1">
+        <div class="flex flex-col items-center justify-center px-10 md:px-20 md:py-10" id="beranda">
+            <h1 class="font-bold text-3xl md:text-7xl md:px-16 md:py-10 leading-snug md:text-center anim-deck-1">
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-lavender to-lavenderIndigo">Menghubungkan</span> negeri, dari 
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-chromeYellow to-pastelOrange">tangan</span> ke 
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-malibu to-frenchBlue">tangan.</span>
             </h1>
-            <p class="font-medium text-gray-500 px-32 text-lg text-center anim-deck-1">Dengan kemajuan teknologi yang begitu pesat, akses ke komoditas juga terus berkembang. Kami menyediakan layanan logistik pengantaran paket yang efisien dan mencapai <span class="font-bold">pedalaman</span> untuk mendukung bisnis anda.</p>
+            <p class="font-medium text-gray-500 pt-8 md:pt-0 md:px-32 md:text-lg md:text-center anim-deck-1">Dengan kemajuan teknologi yang begitu pesat, akses ke komoditas juga terus berkembang. Kami menyediakan layanan logistik pengantaran paket yang efisien dan mencapai <span class="font-bold">pedalaman</span> untuk mendukung bisnis anda.</p>
 
-            <div class="mt-8 mb-16 anim-deck-1">
-                <button class="bg-lavenderIndigo text-white px-6 py-3 rounded-lg mr-2">Kirim Paket</button>
-                <button class="bg-white text-lavenderIndigo px-6 py-3 rounded-lg ml-2">Cek Resi</button>
+            <div class="flex md:visible mt-8 mb-16 anim-deck-1">
+                <button class="bg-lavenderIndigo text-white px-4 md:px-6 py-2 rounded-lg mr-2">Kirim Paket</button>
+                <button class="bg-white text-lavenderIndigo px-4 md:px-6 py-2 rounded-lg ml-2">Cek Resi</button>
             </div>
 
-            <img src="@/assets/img/foto1.jpg" class="anim-deck-1">
+            <img src="@/assets/img/foto1.jpg" class="hidden md:visible anim-deck-1">
         </div>
 
         <!-- Tentang kami -->
-        <div class="flex items-center justify-between px-20 py-10 gap-20" id="tentang">
-            <div class="w-1/2 anim-deck-2-l">
-                <p class="font-medium text-chromeYellow text-lg">Tentang Kami</p>
-                <h1 class="font-bold text-5xl leading-snug">
+        <div class="flex flex-col md:flex-row items-center justify-center md:justify-between md:px-20 md:py-10 gap-5 md:gap-20" id="tentang">
+            <div class="w-full text-center md:text-left px-8 md:px-0 md:w-1/2 anim-deck-2-l">
+                <p class="font-medium text-chromeYellow text-md md:text-lg">Tentang Kami</p>
+                <h1 class="font-bold text-2xl md:text-5xl pt-4 md:pt-0 leading-snug">
                     Solusi untuk mengirimkan barang anda ke seluruh pedalaman.
                 </h1>
             </div>
 
-            <div class="w-1/2 anim-deck-2-r">
-                <p class="font-medium text-gray-500 text-lg text-right">Kami menyediakan layanan pengiriman paket yang praktis dan efisien. Hanya dengan beberapa klik, paket Anda akan diantar oleh kurir ke lokasi tujuan, termasuk daerah <span class="font-bold">pedalaman</span>.</p>
+            <div class="w-full anim-deck-2-r px-8 md:w-1/2">
+                <p class="font-medium text-gray-500 md:text-lg text-right">Kami menyediakan layanan pengiriman paket yang praktis dan efisien. Hanya dengan beberapa klik, paket Anda akan diantar oleh kurir ke lokasi tujuan, termasuk daerah <span class="font-bold">pedalaman</span>.</p>
             </div>
         </div>
 
-        <div class="flex items-stretch justify-between px-20 py-10 gap-7">
-            <div class="w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
+        <div class="flex flex-col md:flex-row items-stretch justify-between px-8 md:px-20 py-10 gap-7">
+            <div class="w-full md:w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
                 <div class="flex items-center justify-center w-12 h-12 bg-red-200 rounded-md text-red-700 text-2xl">
                     <fa icon="fas fa-arrows-to-dot" size="1x"></fa>
                 </div>
                 <h1 class="py-5 text-2xl font-semibold">Focus</h1>
                 <p class="text-gray-300">Menyelesaikan tugas sesuai prosedur dan memiliki kemampuan serta kemampuan yang baik, sehingga perusahaan mampu bersaing di era ekonomi digital.</p>
             </div>
-            <div class="w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
+            <div class="w-full md:w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
                 <div class="flex items-center justify-center w-12 h-12 bg-orange-200 rounded-md text-orange-700 text-2xl">
                     <fa icon="fas fa-person-running" size="1x"></fa>
                 </div>
                 <h1 class="py-5 text-2xl font-semibold">Active and Creative</h1>
                 <p class="text-gray-300">Berpartisipasi dalam setiap kegiatan dan memberikan ide baru untuk perbaikan dan peningkatan kualitas jasa.</p>
             </div>
-            <div class="w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
+            <div class="w-full md:w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
                 <div class="flex items-center justify-center w-12 h-12 bg-green-200 rounded-md text-green-700 text-2xl">
                     <fa icon="fas fa-bell-concierge" size="1x"></fa>
                 </div>
                 <h1 class="py-5 text-2xl font-semibold">Service Excellence</h1>
                 <p class="text-gray-300">Seluruh karyawan dan manajemen memberi pelayanan terbaik kepada pihak internal dan eksternal, sehingga konsumen punya ketertarikan hati.</p>
             </div>
-            <div class="w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
+            <div class="w-full md:w-1/4 bg-astronautBlue p-6 rounded-lg anim-deck-2-m">
                 <div class="flex items-center justify-center w-12 h-12 bg-blue-200 rounded-md text-blue-700 text-2xl">
                     <fa icon="fas fa-people-group" size="1x"></fa>
                 </div>
